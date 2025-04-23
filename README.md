@@ -1,50 +1,30 @@
-# Astro Starter Kit: Basics
+# Plantilla Periódico
 
-```sh
-npm create astro@latest -- --template basics
-```
+Proyecto creado como tarea de la Unidad Formativa "Plantillas en la construcción de páginas web". l curso con Astro para construir una plantilla interactiva de periódico. Este proyecto utiliza RSS para importar y mostrar contenido de medios de comunicación.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Se trata de una plantilla, con un header y un footer. Cuenta con un navbar que permite seleccionar si quieres visualizar noticias de "El Pais" o de "El Mundo"
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🛠️ Tecnologías
 
-## 🚀 Project Structure
+Para llevar a cabo el proyecto utilicé:
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Astro:** Meta-framework para generar páginas rápidas y ligeras.
+- **RSS Parser:** Biblioteca para interpretar feeds RSS.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🧞 Estructura
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Dentro del proyecto encontrarás
 
-## 🧞 Commands
+src/
+├── components/ # Componentes React y Astro
+│ └── card.astro # Componente utilizado para almacenar las noticias
+│ └── NavBar.astro # Incluye un .map para generar de forma dinámica los enlaces a los medios
+│ └── Portada.astro # Contiene noticias falsas que es lo que se ve nada más cargar la web
+├── layouts/ # Uso un layouts principal. Hay otro en vistas de crear uno para las noticias en si, pero no lo terminé de implementar
+├── pages/ # Páginas del periódico. La página principal y una página por cada medio de comunicación
+├── data/ # Aquí almaceno un array de objetos con los medios de comunicación (sus nombres y la url que apunta a su rss)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Cosas nuevas que aprendí haciendo este proyecto
-
-Agregar un RSS.
-Instalé Parser a través de
-"npm install rss-parser"
+🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes una idea para mejorar el proyecto, abre una issue o envía un pull request.

@@ -17,14 +17,17 @@ Para llevar a cabo el proyecto utilicé:
 
 Dentro del proyecto encontrarás
 
+```
 src/
-├── components/ # Componentes React y Astro
-│ └── card.astro # Componente utilizado para almacenar las noticias
-│ └── NavBar.astro # Incluye un .map para generar de forma dinámica los enlaces a los medios
-│ └── Portada.astro # Contiene noticias falsas que es lo que se ve nada más cargar la web
-├── layouts/ # Uso un layouts principal. Hay otro en vistas de crear uno para las noticias en si, pero no lo terminé de implementar
-├── pages/ # Páginas del periódico. La página principal y una página por cada medio de comunicación
-├── data/ # Aquí almaceno un array de objetos con los medios de comunicación (sus nombres y la url que apunta a su rss)
+├── components/        # Componentes React y Astro
+│   ├── card.astro     # Componente utilizado para almacenar las noticias
+│   ├── NavBar.astro   # Incluye un .map para generar de forma dinámica los enlaces a los medios
+│   └── Portada.astro  # Contiene noticias falsas que es lo que se ve nada más cargar la web
+├── layouts/           # Uso un layout principal. Hay otro en vistas para las noticias en sí, pero no lo terminé de implementar
+├── pages/             # Páginas del periódico. La página principal y una página por cada medio de comunicación
+├── data/              # Aquí almaceno un array de objetos con los medios de comunicación (sus nombres y la URL que apunta a su RSS)
+```
 
-🤝 Contribuciones
+## 🤝 Contribuciones
+
 ¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes una idea para mejorar el proyecto, abre una issue o envía un pull request.

@@ -1,0 +1,47 @@
+---
+import Parser from 'rss-parser';
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+
+const parser = new Parser();
+const feed = await parser.parseURL('https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml'); 
+console.log(feed)
+---
+<Layout>
+  <section class="portada">
+    {feed.items.map((item, index) => (
+      <div class={`noticia-${index}`}>
+        <Card titular={item.title} bajada={item.contentSnippet} enlace={item.link} periodista={item.creator} />
+      </div>
+  ))}
+  </section>
+</Layout>
+
+
+<style>
+  .portada {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   padding: 1rem;
+   width: 100%
+ }
+
+
+
+ @media (min-width: 1024px) {
+       
+   
+   .portada {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 1.5rem;
+   padding: 1rem 0;
+   margin-bottom: 1rem;
+   height: auto;
+   width: 80%;
+}
+ 
+ }
+</style>

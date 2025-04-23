@@ -1,0 +1,103 @@
+---
+import Card from "./Card.astro"
+//Sustituya titular, nombre del periodista y texto de bajada para cambiar las noticias que aparecen en portada. No toque nada más.
+const noticias = [
+  {
+    titular: "Argentina y Brasil impulsan el turismo regional",
+    periodista: "Ana Torres",
+    bajada: "Iniciativas buscan fomentar el viaje entre países vecinos mediante la promoción del Portuñol y el desarrollo del patriotismo latinoamericano"
+  },
+  {
+    titular: "Nueva ley de datos en Europa",
+    periodista: "Juan Pérez",
+    bajada: "Las empresas tecnológicas deberán adaptarse a nuevas regulaciones, aunque dará igual si la gente sigue aceptando las condiciones sin leerlas"
+  },
+  {
+    //Esta es la noticia principal
+    titular: "Se disparan los precios del café en Latinoamérica",
+    periodista: "María López",
+    bajada: "Expertos explican que se debe al fenómeno viral mediante el cual miles de adolescentes han comprobado que es mucho mejor que el Monster",
+    imagen: "./images/cafe.jpg"
+  },
+  {
+    titular: "Nuevo récord en la bolsa de Nueva York",
+    periodista: "Lucía Herrera",
+    bajada: "El índice S&P 500 alcanza cifras históricas. Nunca había subido tanto desde el fin de la II Guerra Mundial. Aunque la subida no compensa todo lo que bajó previamente."
+  },
+  {
+    titular: "El desarrollo web y la IA",
+    periodista: "Sofía Méndez",
+    bajada: "Una vez que la IA alcanzó el hito de ser capaz de centrar un div, ahora ya podrá sustituir al 66% de las personas que escribían CSS"
+  }
+]
+---
+<section class="portada">
+  <div class="div1"><Card {...noticias[0]} /></div>
+  <div class="div2"><Card {...noticias[1]} /></div>
+  <div class="div3"><Card {...noticias[2]} /></div>
+  <div class="div4"><Card {...noticias[3]} /></div>
+  <div class="div5"><Card {...noticias[4]} /></div>
+</section>
+
+
+
+<style>
+  
+   .portada {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%
+  }
+
+ 
+
+  @media (min-width: 1024px) {
+        
+    
+    .portada {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    height: auto;
+    width: 80%;
+}
+    
+.div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 6 / span 6;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+  }
+</style>

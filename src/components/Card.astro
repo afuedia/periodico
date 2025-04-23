@@ -1,0 +1,71 @@
+---
+const { titular, periodista, bajada, imagen = "", enlace } = Astro.props
+---
+
+<a href={enlace} class="enlace"><article class="noticia-card">
+  {imagen && (
+    <img src={imagen} alt={`Imagen para ${titular}`} class="imagen" />
+  )}
+  <h2>{titular}</h2>
+  <p class="periodista">Por {periodista}</p>
+  <p class="bajada">{bajada}</p>
+</article></a>
+
+
+<style>
+  .enlace {
+    text-decoration: none;
+  }
+  .noticia-card {
+    margin-bottom: 1rem;
+    margin-top 1rem;
+    background: white;
+    padding: 0.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+  }
+
+  .periodista {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+
+  .bajada {
+    font-size: 1rem;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .bajada {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .
+  }
+</style>

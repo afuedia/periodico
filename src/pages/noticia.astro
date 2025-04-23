@@ -1,0 +1,80 @@
+
+---
+const noticia = {
+  titular: "La revolución de las energías limpias: el futuro del planeta",
+  fecha: "20 de abril, 2025",
+  autor: "Carlos Hernández",
+  bajada: "Un estudio reciente muestra cómo las energías renovables podrían ser la clave para combatir el cambio climático.",
+  contenido: `El mundo está experimentando un cambio hacia las energías limpias como nunca antes. 
+              Con avances tecnológicos y un cambio de mentalidad, las energías renovables podrían convertirse 
+              en la solución definitiva para mitigar los efectos del cambio climático. En este artículo, exploramos 
+              cómo las energías solares, eólicas y otras alternativas podrían transformar la industria energética 
+              en los próximos años. Los expertos coinciden en que, si se implementan de forma adecuada, las energías limpias 
+              no solo reducirán las emisiones de carbono, sino que también crearán miles de empleos y mejorarán la economía global.`
+};
+---
+
+<article class="noticia">
+  <header class="noticia-header">
+    <h1>{noticia.titular}</h1>
+    <p class="fecha">Publicado el: {noticia.fecha}</p>
+    <p class="autor">Por {noticia.autor}</p>
+  </header>
+
+  <section class="noticia-contenido">
+    <p>{noticia.bajada}</p>
+    <div class="contenido-detallado">
+      <p>{noticia.contenido}</p>
+    </div>
+  </section>
+</article>
+
+<style>
+  .noticia {
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'Georgia', serif;
+    color: #333;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .noticia-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .noticia-header .fecha,
+  .noticia-header .autor {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .noticia-contenido {
+    margin-top: 1.5rem;
+  }
+
+  .contenido-detallado {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .noticia {
+      padding: 1rem;
+    }
+
+    .noticia-header h1 {
+      font-size: 2rem;
+    }
+
+    .contenido-detallado {
+      font-size: 1rem;
+    }
+  }
+</style>

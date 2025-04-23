@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
-import ElPaisRSS from "../pages/ElPaisRSS.astro"
+import Portada from "../components/Portada.astro"
 ---
 <!doctype html>
 <html lang="en">
@@ -14,30 +14,16 @@ import ElPaisRSS from "../pages/ElPaisRSS.astro"
 	</head>
 	<body>
 		<Header/>
-		 <slot/>
+			<slot />
 		<Footer/>
 	</body>
 </html>
 
 <style>
-	* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 	html,
 	body {
 		margin: 0;
 		width: 100%;
-		max-width: 100vw;
-		min-height: 100vh;
-		font-size: 16px;
-		line-height: 1.5;
-		background-color: #fff;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
+		height: 100%;
 	}
-	
 </style>
